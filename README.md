@@ -11,7 +11,7 @@ Portfolio personal para presentar mi trayectoria en desarrollo de software y QA 
 - **Trayectoria interactiva:** experiencia y educación filtrables, con detalles desplegables.
 - **Stack tecnológico:** lenguajes, frameworks, automatización, metodologías, control de versiones e IA.
 - **Proyectos destacados:** descripción, tecnologías y enlaces a demos y repositorios disponibles.
-- **CV en PDF:** vista de impresión específica para guardar el currículum desde el navegador.
+- **CV en PDF:** descarga directa del currículum profesional.
 - **Contacto directo:** accesos a WhatsApp, GitHub y LinkedIn.
 - **Tema claro y oscuro:** selector disponible en la navegación.
 - **Terminal interactiva:** comandos para explorar el perfil desde el footer.
@@ -98,7 +98,9 @@ La primera tarjeta destaca [Personal Planner](https://personal-planner-dusky.ver
 
 ### CV en PDF
 
-Los botones de CV abren el diálogo de impresión del navegador. Elegí **Guardar como PDF** para generar el documento. Los estilos de impresión muestran la hoja del CV y ocultan la interfaz del portfolio.
+Los botones de CV descargan el archivo `public/cv/Marcos-Lisoski-Fullstack-Developer.pdf`. Para actualizar el currículum, reemplazá ese archivo manteniendo el nombre o actualizá la propiedad `profile.cv`.
+
+La foto de perfil está en `public/images/marcos-lisoski.jpeg` y se muestra en la sección «Sobre mí». El encuadre y el marco se definen en `about.css`.
 
 ### Terminal
 

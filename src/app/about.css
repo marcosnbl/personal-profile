@@ -13,8 +13,7 @@
 }
 
 .about-aside {
-  position: sticky;
-  top: 105px;
+  position: relative;
 }
 .about-aside h2 {
   margin: 22px 0 34px;
@@ -22,6 +21,44 @@
   line-height: 1.13;
   letter-spacing: -0.06em;
   font-weight: 570;
+}
+
+.profile-portrait {
+  width: min(100%, 250px);
+  margin: 0 0 28px;
+}
+
+.portrait-frame {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  border-radius: 24px;
+  background: #f6f6f6;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16);
+}
+
+.portrait-frame img {
+  object-fit: cover;
+  object-position: center bottom;
+  transform: scale(1.15);
+  transform-origin: center bottom;
+}
+
+.profile-portrait figcaption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  color: var(--muted);
+  font: 10px var(--font-mono);
+}
+
+.profile-portrait figcaption span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
 }
 .about-side-note {
   display: flex;
@@ -91,6 +128,14 @@
 }
 
 @media (max-width: 720px) {
+  .profile-portrait {
+    width: min(100%, 220px);
+    margin: 24px auto;
+  }
+
+  .profile-portrait figcaption {
+    justify-content: center;
+  }
   .about-section {
     padding: 72px 0 77px;
   }

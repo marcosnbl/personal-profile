@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import Image from "next/image";
 import {
   ArrowDown,
   ArrowDownRight,
@@ -29,6 +30,7 @@ const profile = {
   title: "Software Developer",
   focus: "Full-Stack & Backend Enthusiast · AI First",
   location: "Posadas, Misiones, Argentina",
+  cv: "/cv/Marcos-Lisoski-Fullstack-Developer.pdf",
   email: "",
   github: "https://github.com/marcosnbl/",
   linkedin: "https://www.linkedin.com/in/marcosnbl/",
@@ -169,7 +171,7 @@ const projects = [
     accent: "violet",
     demo: "",
     code: "",
-  },
+  }
 ];
 
 const nav = [
@@ -329,9 +331,9 @@ export default function Home() {
             <a className="button button-primary" href="#proyectos">
               Ver proyectos <ArrowUpRight size={17} />
             </a>
-            <button className="button button-ghost" onClick={() => window.print()}>
+            <a className="button button-ghost" href={profile.cv} download>
               <Download size={16} /> Descargar CV (PDF)
-            </button>
+            </a>
           </div>
           <div className="hero-social">
             <span className="social-label">ENCUÉNTRAME EN</span>
@@ -509,6 +511,17 @@ export default function Home() {
               <br />
               <span className="muted-heading">Curiosidad como motor.</span>
             </h2>
+            <figure className="profile-portrait">
+              <div className="portrait-frame">
+                <Image
+                  src="/images/marcos-lisoski.jpeg"
+                  alt="Retrato de Marcos Lisoski, sonriendo y con anteojos"
+                  fill
+                  sizes="(max-width: 720px) 220px, 250px"
+                />
+              </div>
+              <figcaption><span aria-hidden="true" />Marcos Lisoski</figcaption>
+            </figure>
             <div className="about-side-note">
               <span className="about-spark">✳</span>
               <div>
@@ -824,13 +837,13 @@ export default function Home() {
             </article>
           ))}
         </div>
-        <div className="project-disclaimer">
+        {/*<div className="project-disclaimer">
           <Sparkles size={15} />
           <span>
             El proyecto 03 es un espacio de ejemplo: reemplazalo por un proyecto real
             cuando quieras.
           </span>
-        </div>
+        </div>*/}
       </section>
 
       <section className="cv-section" id="cv">
@@ -848,11 +861,11 @@ export default function Home() {
               Mi recorrido combina formación en programación, experiencia en calidad y el
               impulso por crecer construyendo software de punta a punta.
             </p>
-            <button onClick={() => window.print()} className="button button-primary">
-              <Download size={16} /> Guardar CV en PDF
-            </button>
+            <a href={profile.cv} download className="button button-primary">
+              <Download size={16} /> Descargar CV (PDF)
+            </a>
             <span className="cv-hint">
-              Se abre el diálogo de impresión de tu navegador.
+              Mi currículum completo en formato PDF.
             </span>
           </div>
           <div className="cv-sheet">
