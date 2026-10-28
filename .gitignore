@@ -1,0 +1,17 @@
+# Dependencies and generated files
+node_modules/
+.next/
+out/
+dist/
+coverage/
+*.tsbuildinfo
+*.log
+
+# Local deployment metadata and secrets
+.vercel/
+.env*
+!.env.example
+
+# Operating system files
+.DS_Store
+Thumbs.db

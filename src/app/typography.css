@@ -1,0 +1,13 @@
+.hero-lede,
+.about-copy p,
+.section-description,
+.timeline-detail p,
+.project-content p,
+.cv-intro > p,
+.cv-summary p,
+.contact-copy > p {
+  text-align: justify;
+  text-align-last: start;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}

@@ -1,0 +1,130 @@
+.planner-art {
+  padding: 12px 13px;
+  color: #aab5ac;
+  font-family: var(--font-mono), monospace;
+}
+
+.planner-art-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  color: #839087;
+  font-size: 6px;
+}
+
+.planner-art-head b {
+  color: #b8f268;
+  font-size: 6px;
+  font-weight: 500;
+}
+
+.planner-days {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 3px;
+  margin-top: 10px;
+}
+
+.planner-day {
+  display: flex;
+  min-height: 42px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: 1px solid rgba(220, 235, 230, 0.08);
+  border-radius: 3px;
+  color: #7d8981;
+  font-size: 6px;
+}
+
+.planner-day i {
+  color: #dce4dc;
+  font-size: 7px;
+  font-style: normal;
+}
+
+.planner-day b,
+.planner-session-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(220, 235, 230, 0.2);
+}
+
+.planner-day.active {
+  border-color: rgba(184, 242, 104, 0.45);
+  background: rgba(184, 242, 104, 0.08);
+  color: #b8f268;
+}
+
+.planner-day.active b,
+.planner-session-dot {
+  background: #b8f268;
+}
+
+.planner-session {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 9px;
+  padding: 7px 8px;
+  border: 1px solid rgba(220, 235, 230, 0.09);
+  border-radius: 3px;
+  background: rgba(220, 235, 230, 0.03);
+}
+
+.planner-session strong,
+.planner-session small {
+  display: block;
+}
+
+.planner-session strong {
+  color: #dce4dc;
+  font-size: 7px;
+  font-weight: 500;
+}
+
+.planner-session small {
+  margin-top: 3px;
+  color: #7d8981;
+  font-size: 6px;
+}
+
+.planner-session-status {
+  margin-left: auto;
+  color: #b8f268;
+  font-size: 6px;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent);
+  font: 9px var(--font-mono);
+  transition: gap 0.2s;
+}
+
+.project-links a:hover {
+  gap: 9px;
+}
+
+@media (max-width: 720px) {
+  .project-links {
+    gap: 10px;
+  }
+
+  .project-links a {
+    font-size: 8px;
+  }
+}

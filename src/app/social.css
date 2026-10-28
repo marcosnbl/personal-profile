@@ -1,0 +1,19 @@
+.hero-social {
+  gap: 13px;
+}
+.social-icon-only {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+}
+.social-icon-only:not(.disabled-link):hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.social-icon-only svg {
+  width: 16px;
+  height: 16px;
+}

@@ -1,0 +1,144 @@
+.about-section {
+  position: relative;
+  padding: 102px 0 108px;
+  background: var(--bg-soft);
+  border-block: 1px solid var(--line);
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.78fr) minmax(0, 1.22fr);
+  align-items: start;
+  gap: clamp(48px, 8vw, 100px);
+}
+
+.about-aside {
+  position: sticky;
+  top: 105px;
+}
+.about-aside h2 {
+  margin: 22px 0 34px;
+  font-size: clamp(31px, 3.5vw, 45px);
+  line-height: 1.13;
+  letter-spacing: -0.06em;
+  font-weight: 570;
+}
+.about-side-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 17px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.about-spark {
+  color: var(--accent);
+  font-size: 18px;
+  line-height: 1;
+}
+.about-side-note strong,
+.about-side-note small {
+  display: block;
+}
+.about-side-note strong {
+  font-size: 11px;
+  font-weight: 600;
+}
+.about-side-note small {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.6;
+}
+.about-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 23px;
+  color: var(--accent);
+  font-size: 10px;
+}
+.about-contact-link:hover {
+  gap: 12px;
+}
+.about-copy {
+  max-width: 690px;
+}
+.about-copy p {
+  margin: 0 0 19px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.95;
+}
+.about-copy p:first-child {
+  color: var(--text);
+  font-size: 13px;
+}
+.about-copy p:last-child {
+  margin-bottom: 0;
+}
+.about-signoff {
+  margin-top: 26px !important;
+  padding: 16px 18px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--accent);
+  border-radius: 0 7px 7px 0;
+  color: var(--text) !important;
+}
+.about-signoff span {
+  white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+  .about-section {
+    padding: 72px 0 77px;
+  }
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 29px;
+  }
+  .about-aside {
+    position: static;
+  }
+  .about-aside h2 {
+    margin: 16px 0 19px;
+    font-size: 35px;
+  }
+  .about-side-note {
+    display: none;
+  }
+  .about-contact-link {
+    margin-top: 0;
+  }
+  .about-copy p {
+    margin-bottom: 16px;
+    font-size: 11px;
+    line-height: 1.85;
+  }
+  .about-copy p:first-child {
+    font-size: 12px;
+  }
+  .about-signoff {
+    margin-top: 21px !important;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .about-aside h2 {
+    font-size: 31px;
+  }
+  .about-copy p {
+    font-size: 10px;
+  }
+  .about-copy p:first-child {
+    font-size: 11px;
+  }
+}
+
+@media print {
+  .about-section {
+    display: none !important;
+  }
+}

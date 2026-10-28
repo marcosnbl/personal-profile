@@ -1,0 +1,15 @@
+.contact-layout {
+  display: block;
+}
+.contact-copy {
+  max-width: 760px;
+  margin-inline: auto;
+  text-align: center;
+}
+.contact-copy > p {
+  margin-inline: auto;
+}
+.contact-meta,
+.contact-social {
+  justify-content: center;
+}

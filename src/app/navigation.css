@@ -1,0 +1,51 @@
+/* Clip decorative overflow without creating a scroll container for the sticky header. */
+.site {
+  overflow: clip;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  width: 100%;
+  padding-inline: max(32px, calc((100% - 1320px) / 2));
+  background: color-mix(in srgb, var(--bg) 94%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+@media (max-width: 720px) {
+  html {
+    scroll-padding-top: 85px;
+  }
+
+  .topbar {
+    width: 100%;
+    padding-inline: 20px;
+  }
+
+  .mobile-nav {
+    top: calc(100% + 8px);
+    left: 20px;
+    right: 20px;
+    max-height: calc(100dvh - 90px);
+    overflow-y: auto;
+    animation: fade-in 0.2s ease;
+  }
+
+  .mobile-nav a {
+    min-height: 44px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .topbar {
+    padding-inline: 16px;
+  }
+
+  .mobile-nav {
+    left: 16px;
+    right: 16px;
+  }
+}

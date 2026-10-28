@@ -1,0 +1,20 @@
+.hero-visual {
+  height: 430px;
+}
+.chip-top {
+  top: -2px;
+  right: 4px;
+}
+.chip-bottom {
+  bottom: -4px;
+  left: -1px;
+}
+.visual-caption {
+  bottom: -24px;
+}
+
+@media (max-width: 720px) {
+  .hero-visual {
+    height: 430px;
+  }
+}
