@@ -94,7 +94,7 @@ Los datos principales están al comienzo de `src/app/page.tsx`:
 
 La biografía y los textos de presentación se editan en las secciones correspondientes del mismo archivo. Los colores de ambos temas se definen en `globals.css`; los metadatos, en `layout.tsx`.
 
-La primera tarjeta destaca [Personal Planner](https://personal-planner-dusky.vercel.app/), la segunda presenta este portfolio y la tercera queda reservada para un próximo proyecto.
+La primera tarjeta destaca [Personal Planner](https://personal-planner-dusky.vercel.app/), la segunda presenta este portfolio y la tercera muestra [Tabata Training Timer](https://tabata-training-timer.vercel.app/), un temporizador de intervalos para entrenamientos.
 
 ### CV en PDF
 

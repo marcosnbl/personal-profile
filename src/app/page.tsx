@@ -163,15 +163,15 @@ const projects = [
   },
   {
     number: "03",
-    title: "Tu próximo proyecto",
-    category: "IDEA EN CONSTRUCCIÓN",
+    title: "Tabata Training Timer",
+    category: "ENTRENAMIENTO · PWA",
     description:
-      "El siguiente espacio destacado está listo. Cuando sumes un proyecto, aquí vas a poder contar el problema, las decisiones técnicas y el resultado.",
-    stack: ["Tu stack", "Tu solución", "Tu historia"],
+      "Temporizador de intervalos para Tabata, HIIT y EMOM. Permite crear y guardar rutinas personalizadas, controlar rondas y series y recibir avisos sonoros con Web Audio API. Incluye soporte PWA y la opción de mantener la pantalla encendida en navegadores compatibles.",
+    stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "PWA"],
     accent: "violet",
-    demo: "",
-    code: "",
-  }
+    demo: "https://tabata-training-timer.vercel.app/",
+    code: "https://github.com/marcosnbl/tabata-training-timer",
+  },
 ];
 
 const nav = [
@@ -520,7 +520,10 @@ export default function Home() {
                   sizes="(max-width: 720px) 220px, 250px"
                 />
               </div>
-              <figcaption><span aria-hidden="true" />Marcos Lisoski</figcaption>
+              <figcaption>
+                <span aria-hidden="true" />
+                Marcos Lisoski
+              </figcaption>
             </figure>
             <div className="about-side-note">
               <span className="about-spark">✳</span>
@@ -596,9 +599,9 @@ export default function Home() {
             </h2>
           </div>
           <p className="section-description">
-            Mi experiencia abarca el testing de software, la automatización y el desarrollo de frameworks
-             de pruebas; una
-            base que hoy impulso hacia el desarrollo de software.
+            Mi experiencia abarca el testing de software, la automatización y el
+            desarrollo de frameworks de pruebas; una base que hoy impulso hacia el
+            desarrollo de software.
           </p>
         </div>
         <div className="timeline-controls" role="group" aria-label="Filtrar trayectoria">
@@ -785,12 +788,14 @@ export default function Home() {
                       </div>
                     </div>
                   ) : (
-                    <div className="idea-art">
-                      <span>+</span>
-                      <i />
-                      <i />
-                      <i />
-                      <b>Tu idea, próximamente</b>
+                    <div className="timer-art" aria-hidden="true">
+                      <span className="timer-art-label">TABATA · TRABAJO</span>
+                      <div className="timer-art-clock">00:20</div>
+                      <span className="timer-art-round">RONDA 01 / 08</span>
+                      <div className="timer-art-controls">
+                        <span>Ⅱ</span>
+                        <span>↻</span>
+                      </div>
                     </div>
                   )}
                 </div>
@@ -816,7 +821,7 @@ export default function Home() {
                       ? "Proyecto propio"
                       : project.number === "02"
                         ? "Estás aquí"
-                        : "Espacio preparado"}
+                        : "Proyecto propio"}
                   </span>
                 </div>
                 {(project.demo || project.code) && (
@@ -837,13 +842,6 @@ export default function Home() {
             </article>
           ))}
         </div>
-        {/*<div className="project-disclaimer">
-          <Sparkles size={15} />
-          <span>
-            El proyecto 03 es un espacio de ejemplo: reemplazalo por un proyecto real
-            cuando quieras.
-          </span>
-        </div>*/}
       </section>
 
       <section className="cv-section" id="cv">
@@ -864,9 +862,7 @@ export default function Home() {
             <a href={profile.cv} download className="button button-primary">
               <Download size={16} /> Descargar CV (PDF)
             </a>
-            <span className="cv-hint">
-              Mi currículum completo en formato PDF.
-            </span>
+            <span className="cv-hint">Mi currículum completo en formato PDF.</span>
           </div>
           <div className="cv-sheet">
             <div className="cv-sheet-top">
