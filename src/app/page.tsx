@@ -183,7 +183,7 @@ const nav = [
 ];
 
 export default function Home() {
-  const [light, setLight] = useState(false);
+  const [light, setLight] = useState(true);
   const [mobileOpen, setMobileOpen] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
@@ -848,7 +848,7 @@ export default function Home() {
         <div className="section-wrap cv-layout">
           <div className="cv-intro">
             <div className="section-kicker">
-              <span>05</span> / CV INTERACTIVO
+              <span>05</span> / CURRÍCULUM
             </div>
             <h2>
               Una historia

@@ -14,6 +14,7 @@ Portfolio personal para presentar mi trayectoria en desarrollo de software y QA 
 - **CV en PDF:** descarga directa del currículum profesional.
 - **Contacto directo:** accesos a WhatsApp, GitHub y LinkedIn.
 - **Tema claro y oscuro:** selector disponible en la navegación.
+- **Identidad editorial:** tema claro por defecto, tonos cálidos, bordes finos y amarillo chartreuse en acciones y estados activos. Los tokens y las adaptaciones de los componentes están centralizados en `src/app/editorial.css`.
 - **Terminal interactiva:** comandos para explorar el perfil desde el footer.
 
 ## Stack del proyecto
