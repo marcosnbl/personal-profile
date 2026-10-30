@@ -142,10 +142,10 @@ const projects = [
   {
     number: "01",
     title: "Personal Planner",
-    category: "ENTRENAMIENTO · WEB APP",
+    category: "ENTRENAMIENTO · PWA",
     description:
-      "Proyecto personal de planificador semanal para organizar mis entrenamientos y registrar sesiones realizadas. Compara métricas planificadas y reales, muestra la evolución de kilómetros de las últimas 12 semanas y permite importar o exportar respaldos CSV y JSON. Los datos se guardan en el navegador.",
-    stack: ["Next.js", "React", "TypeScript", "LocalStorage"],
+      "Planificador de entrenamientos con múltiples sesiones por día, calendario interactivo y seguimiento por disciplina. Permite mover y duplicar sesiones, copiar semanas, guardar plantillas y deshacer cambios. Compara métricas planificadas y reales con estadísticas de 12 semanas. Incluye respaldos JSON, exportación CSV y soporte PWA para instalarlo y acceder sin conexión tras la primera carga. Los datos se guardan en el navegador.",
+    stack: ["Next.js", "React", "TypeScript", "LocalStorage", "PWA"],
     accent: "lime",
     demo: "https://personal-planner-marcoslisoski.vercel.app/",
     code: "https://github.com/marcosnbl/personal-planner",
