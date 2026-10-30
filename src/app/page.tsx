@@ -147,7 +147,7 @@ const projects = [
       "Proyecto personal de planificador semanal para organizar mis entrenamientos y registrar sesiones realizadas. Compara métricas planificadas y reales, muestra la evolución de kilómetros de las últimas 12 semanas y permite importar o exportar respaldos CSV y JSON. Los datos se guardan en el navegador.",
     stack: ["Next.js", "React", "TypeScript", "LocalStorage"],
     accent: "lime",
-    demo: "https://personal-planner-dusky.vercel.app/",
+    demo: "https://personal-planner-marcoslisoski.vercel.app/",
     code: "https://github.com/marcosnbl/personal-planner",
   },
   {
@@ -180,7 +180,7 @@ const projects = [
       "El clásico Snake con tablero en Canvas, tres dificultades y modos con o sin paredes. Incluye controles de teclado, botones táctiles y gestos, récords por modo de juego y pausa automática al cambiar de pestaña. Se puede instalar como PWA y jugar sin conexión después de preparar la caché.",
     stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Canvas", "PWA"],
     accent: "lime",
-    demo: "https://snake-game-tau-rose.vercel.app/",
+    demo: "https://snake-game-marcoslisoski.vercel.app/",
     code: "https://github.com/marcosnbl/snake-game",
   },
 ];
