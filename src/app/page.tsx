@@ -159,7 +159,7 @@ const projects = [
     stack: ["Next.js", "TypeScript", "Tailwind", "React"],
     accent: "blue",
     demo: "",
-    code: "",
+    code: "https://github.com/marcosnbl/personal-profile",
   },
   {
     number: "03",
@@ -171,6 +171,17 @@ const projects = [
     accent: "violet",
     demo: "https://tabata-training-timer.vercel.app/",
     code: "https://github.com/marcosnbl/tabata-training-timer",
+  },
+  {
+    number: "04",
+    title: "Snake Game",
+    category: "VIDEOJUEGO · PWA",
+    description:
+      "El clásico Snake con tablero en Canvas, tres dificultades y modos con o sin paredes. Incluye controles de teclado, botones táctiles y gestos, récords por modo de juego y pausa automática al cambiar de pestaña. Se puede instalar como PWA y jugar sin conexión después de preparar la caché.",
+    stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Canvas", "PWA"],
+    accent: "lime",
+    demo: "https://snake-game-tau-rose.vercel.app/",
+    code: "https://github.com/marcosnbl/snake-game",
   },
 ];
 
@@ -787,7 +798,7 @@ export default function Home() {
                         <div className="browser-button">Ver proyectos ↗</div>
                       </div>
                     </div>
-                  ) : (
+                  ) : project.number === "03" ? (
                     <div className="timer-art" aria-hidden="true">
                       <span className="timer-art-label">TABATA · TRABAJO</span>
                       <div className="timer-art-clock">00:20</div>
@@ -797,9 +808,32 @@ export default function Home() {
                         <span>↻</span>
                       </div>
                     </div>
+                  ) : (
+                    <div className="snake-preview" aria-hidden="true">
+                      <span>SNAKE GAME</span>
+                      <div className="snake-board">
+                        {Array.from({ length: 84 }, (_, index) => (
+                          <i
+                            key={index}
+                            className={
+                              index === 20
+                                ? "snake-cell head"
+                                : index === 56
+                                  ? "snake-cell food"
+                                  : [40, 41, 42, 30, 18, 19].includes(index)
+                                    ? "snake-cell body"
+                                    : "snake-cell"
+                            }
+                          />
+                        ))}
+                      </div>
+                      <small>TECLADO · TOUCH</small>
+                    </div>
                   )}
                 </div>
-                <span className="art-counter">{project.number} / 03</span>
+                <span className="art-counter">
+                  {project.number} / {String(projects.length).padStart(2, "0")}
+                </span>
               </div>
               <div className="project-content">
                 <div className="project-category">{project.category}</div>
@@ -816,20 +850,20 @@ export default function Home() {
                       </span>
                     ))}
                   </div>
-                  <span className="project-note">
-                    {project.number === "01"
-                      ? "Proyecto propio"
-                      : project.number === "02"
-                        ? "Estás aquí"
-                        : "Proyecto propio"}
-                  </span>
+                  <span className="project-note">Proyecto propio</span>
                 </div>
                 {(project.demo || project.code) && (
                   <div className="project-links">
-                    {project.demo && (
-                      <a href={project.demo} target="_blank" rel="noreferrer">
-                        Demo en vivo <ArrowUpRight size={13} />
-                      </a>
+                    {project.number === "02" ? (
+                      <span className="project-current" aria-current="page">
+                        Estás aquí
+                      </span>
+                    ) : (
+                      project.demo && (
+                        <a href={project.demo} target="_blank" rel="noreferrer">
+                          Demo en vivo <ArrowUpRight size={13} />
+                        </a>
+                      )
                     )}
                     {project.code && (
                       <a href={project.code} target="_blank" rel="noreferrer">

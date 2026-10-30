@@ -464,6 +464,10 @@
 }
 
 /* Product previews stay inverted, in a neutral palette. */
+.project-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .project-card {
   display: flex;
   flex-direction: column;
@@ -569,7 +573,8 @@
   border-top: 0;
   gap: 8px;
 }
-.project-links a {
+.project-links a,
+.project-current {
   min-height: 44px;
   padding-inline: 10px;
   border: 1px solid var(--line-strong);
@@ -698,7 +703,8 @@
   .project-content {
     padding: 20px;
   }
-  .project-links a {
+  .project-links a,
+  .project-current {
     font-size: 11px;
   }
 }
@@ -823,6 +829,7 @@
     font-size: 11px;
   }
   .project-grid {
+    grid-template-columns: 1fr;
     gap: 24px;
   }
   .project-card {
@@ -845,7 +852,8 @@
   .project-links {
     margin-top: 8px;
   }
-  .project-links a {
+  .project-links a,
+  .project-current {
     font-size: 12px;
   }
   .cv-section {
