@@ -29,7 +29,7 @@ const profile = {
   name: "Marcos Lisoski",
   title: "Software Developer",
   focus: "Full-Stack & Backend Enthusiast · AI First",
-  location: "Buenos Aires, AR",
+  location: "Posadas, Misiones, Argentina",
   cv: "/cv/Marcos-Lisoski-Fullstack-Developer.pdf",
   email: "",
   github: "https://github.com/marcosnbl/",
@@ -478,7 +478,7 @@ export default function Home() {
                 <i /> Open to opportunities
               </span>
               <span>
-                Buenos Aires, AR <span className="flag">✳</span>
+                POS, AR <span className="flag">✳</span>
               </span>
             </div>
           </div>
